@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Shizuru&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/js.js') }}"></script>
+    <title>Welcome</title>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            {% if 'user_id' in session %}
+            <a href="/profile">Profile</a>
+            <a href="/posts/new">Create Post</a>
+            <a href="/posts/all">Read Post</a>
+            <a href="/logout">Log Out</a>
+            {% endif %}
+            {% if 'user_id' not in session %}
+            <a href="/resources">Resources</a>
+            <a href="/check">Check Symptoms</a>
+            <a href="/contact">Contact Us</a>
+            {% endif %}
+            
+
+        </div>
+    </div>
+    <div class="nav">
+        <img id='hand' src="{{ url_for('static', filename='img/parent.png') }}">
+        <h1>Speedy Recovery</h1>
+        <ul class="links">
+            <li class="li"><a href="/signup" onclick="message()">Sign Up</a></li> |
+            <li class="li2"><a href="/login" onclick="message()">Log In</a></li>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </ul>
+    </div>
+    <div class="disclaimer">
+        <p>DISCLAIMER: THIS WEBSITE DOES NOT PROVIDE MEDICAL ADVICE. The guides and symptom checker are only that,
+            guides, only for informational purposes. There is no on-site medical health professional and always go to
+            your doctor for medical advice. For urgent care and emergencies, please call your primary doctor or 911. Go
+            to the nearest hospital.</p>
+    </div>
+    <div class="container">
+        <img id='splash' src="{{ url_for('static', filename='img/splash.png') }}">
+        <div class="container1">
+            <div class="top">
+                <p class="square1"><em><strong>What we do?</strong></em><br>
+
+                    -Check your child's symptoms<br>
+                    -Provide articles on common illnesse<br>
+                    -Recommend healthcare providers
+
+                </p>
+                <div class="square2"></div>
+            </div>
+            <div class="bottom">
+                <div class="square3" onmouseover="addShadow(this)" onmouseleave="removeShadow(this)"> <br>
+                </div>
+                <div class="square4"><br>Live Doctors<br>(Coming Soon)</div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="rectangle">
+                <p class="check">Hello welcome to our website, "Speedy Recovery"! Our goal is to create a friendly-parent experience and a beautiful community for parents to share their child's story in the create post section of our website. Here, you can also read other parents' posts. In order to access our community of parents, you will need to sign up and create an user account. Your posts may be to share or to ask a question.
+                </p> 
+                <p class="check_two"> 
+                    Our symptom-checker does not require a user account to look up 'possible' diagnosis. A friendly reminder, this website does not give medical advice. Always check with your healthcare provider as circumstances and experiences diff case by case. 
+                <p>You may find the symptom-checker in our drop-down menu!</p>
+                <!-- <form action="/search" method="post"> -->
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
