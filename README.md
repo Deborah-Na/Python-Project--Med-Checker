@@ -12,7 +12,8 @@ Here's a video demo:
 https://youtu.be/khtE5keN98M
 
 Deployment Link:
-http:// 3.83.123.200
+
+http://3.83.123.200
 
 note: Auth Token may have been expired. 
 
