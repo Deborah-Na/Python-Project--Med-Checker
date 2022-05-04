@@ -11,6 +11,11 @@ Here's a video demo:
 
 https://youtu.be/khtE5keN98M
 
+Deployment Link:
+http:// 3.83.123.200
+
+note: Auth Token may have been expired. 
+
 
 You can also register and log in to create and share posts with other users. 
 
